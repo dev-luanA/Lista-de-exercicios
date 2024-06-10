@@ -1,0 +1,67 @@
+<!-- Luana Aparecida Tavares -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11 a 15</title>
+    <link rel="stylesheet" href="ex14.css">
+</head>
+<body>
+
+    <div class="categories">
+        <button class="category-button" data-category="all">Todas</button>
+        <button class="category-button" data-category="villains">Vilões</button>
+        <button class="category-button" data-category="main-characters">Principais</button>
+        <button class="category-button" data-category="akuma-no-mi-users">Usuários de Akuma no Mi</button>
+        <button class="category-button" data-category="scenarios">Cenários</button>
+    </div>
+
+    <div class="gallery">
+        <div class="image villains"><img src="tashigivila.webp" alt="Vilão 1"></div>
+        <div class="image villains"><img src="buggyvilao.webp" alt="Vilão 2"></div>
+        <div class="image villains"><img src="kaidovilao.webp" alt="Vilão 3"></div>
+        <div class="image villains"><img src="kuzanvilao.jpg" alt="Vilão 4"></div>
+        <div class="image villains"><img src="ceasarclownvilao.webp" alt="Vilão 5"></div>
+        <div class="image villains"><img src="moriavilao.jpg" alt="Vilão 6"></div>
+        <div class="image main-characters"><img src="nami.webp" alt="Personagem Principal 1"></div>
+        <div class="image main-characters"><img src="zoro.png" alt="Personagem Principal 2"></div>
+        <div class="image main-characters akuma-no-mi-users"><img src="robin.webp" alt="Personagem Principal e Usuário de Akuma no Mi"></div>
+        <div class="image main-characters akuma-no-mi-users"><img src="chopper.webp" alt="Personagem Principal e Usuário de Akuma no Mi"></div>
+        <div class="image main-characters akuma-no-mi-users"><img src="Luffy.jpg" alt="Personagem Principal e Usuário de Akuma no Mi"></div>
+        <div class="image main-characters"><img src="sanji.jpg" alt="Personagem Principal 3"></div>
+        <div class="image main-characters"><img src="franky.jpg" alt="Personagem Principal 4"></div>
+        <div class="image main-characters"><img src="usopp.jpg" alt="Personagem Principal 5"></div>
+        <div class="image akuma-no-mi-users"><img src="aceusuario.jpg" alt="Usuário de Akuma no Mi 1"></div>
+        <div class="image akuma-no-mi-users"><img src="lawusuario.webp" alt="Usuário de Akuma no Mi 2"></div>
+        <div class="image akuma-no-mi-users"><img src="barbabranca.jpg" alt="Usuário de Akuma no Mi 3"></div>
+        <div class="image villains akuma-no-mi-users"><img src="bigmomusuario.webp" alt="Usuária de Akuma no Mi e Vilã"></div>
+        <div class="image villains akuma-no-mi-users"><img src="barbanegrausuario.webp" alt="Usuário de Akuma no Mi e Vilão"></div>
+        <div class="image scenarios"><img src="cenariosky.webp" alt="Cenário 1"></div>
+        <div class="image scenarios"><img src="cenarioarlong.webp" alt="Cenário 2"></div>
+    </div>
+
+<script>
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const images = document.querySelectorAll('.image');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+
+            images.forEach(image => {
+                if (category === 'all') {
+                    image.style.display = 'block';
+                } else {
+                    if (image.classList.contains(category)) {
+                        image.style.display = 'block';
+                    } else {
+                        image.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

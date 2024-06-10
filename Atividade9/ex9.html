@@ -1,0 +1,25 @@
+<!-- Luana Aparecida Tavares -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação CSS com Botão</title>
+    <link rel="stylesheet" href="ex9.css">
+</head>
+<body>
+    <button class="animate-btn" id="animateButton">Clique aqui</button>
+
+    <script>
+        document.getElementById('animateButton').addEventListener('click', function() {
+            let button = this;
+
+            if (button.classList.contains('animate')) {
+                button.classList.remove('animate');
+            } else {
+                button.classList.add('animate');
+            }
+        });
+    </script>
+</body>
+</html>

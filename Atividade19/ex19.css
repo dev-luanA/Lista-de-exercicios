@@ -1,0 +1,106 @@
+/* Luana Aparecida Tavares*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #127;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #127; /* Azul cor #127 */
+}
+
+form {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    margin-top: 20px; /* Distância entre o topo da página e o título */
+    margin-bottom: 20px; /* Distância entre as imagens e o formulário */
+}
+
+form {
+    margin-bottom: 20px; /* Distância entre o formulário e as imagens */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #127; /* Azul cor #127 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Tom de azul mais escuro */
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as imagens na pré-visualização */
+}
+
+.preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.preview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

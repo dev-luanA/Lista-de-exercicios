@@ -1,0 +1,99 @@
+<!-- Luana Aparecida Tavares -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - One Piece</title>
+  <style>
+   
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #F2F2F2;
+    }
+
+    .faq-container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #FFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 1px solid #127;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      background-color: #FFF;
+      border-radius: 5px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .question:hover {
+      background-color: #F0F0F0;
+    }
+
+    .question-title {
+      cursor: pointer;
+      font-size: 20px;
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .answer {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .answer.active {
+      display: block;
+    }
+
+    .answer p {
+      font-size: 16px;
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="faq-container">
+    <div class="question">
+      <h2 class="question-title">Qual é a fruta que o Chopper comeu?</h2>
+      <div class="answer">
+        <p>O Hito Hito no Mi é uma Akuma no Mi do tipo Zoan que permite ao usuário se transformar em um híbrido de humano e um humano completo à vontade. "Hito" é japonês para "humano". Nas versões em inglês, ela é chamada de Fruit Human-Human.</p>
+      </div>
+    </div>
+    <div class="question">
+      <h2 class="question-title">O que Ace é de Luffy?</h2>
+      <div class="answer">
+        <p>Ace dos Punhos de Fogo, foi o irmão mais velho adotivo de Luffy e Sabo, e filho do falecido Rei dos Piratas, Gol D. Roger e sua amante, Portgas D. Rouge.</p>
+      </div>
+    </div>
+    <div class="question">
+      <h2 class="question-title">Qual a relação entre Nami e Arlong?</h2>
+      <div class="answer">
+        <p>Arlong é um dos vilões da saga East Blue e líder dos Piratas do Arlong. Ele ocupou a vila de Nami, Cocoyasi, e a fez desenhar mapas para ele como parte de sua tripulação. Nami foi forçada a trabalhar para ele em troca da liberdade de sua vila e de sua irmã adotiva, Nojiko.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+   
+    document.addEventListener('DOMContentLoaded', function() {
+      const questions = document.querySelectorAll('.question');
+
+      questions.forEach(function(question) {
+        const title = question.querySelector('.question-title');
+
+        title.addEventListener('click', function() {
+          question.querySelector('.answer').classList.toggle('active');
+        });
+      });
+    });
+
+  </script>
+</body>
+</html>

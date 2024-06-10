@@ -1,0 +1,39 @@
+body {
+    background-color: #70bcff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.animate-btn {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.animate {
+    transform: scale(0.5); /* Modificado para diminuir o tamanho do botão */
+}
+
+
+.animate-btn:hover {
+    background-color: rgb(196, 189, 125);
+}
+
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}

@@ -1,0 +1,19 @@
+/* Luana Aparecida Tavares*/
+.audio-player {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .controls button {
+    background-color: #c25334;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background-color: #f41100;
+  }
+  

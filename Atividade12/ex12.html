@@ -1,0 +1,40 @@
+<!-- Luana Aparecida Tavares -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11 a 15</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="ex12.js"></script>
+    <link rel="stylesheet" href="ex12.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><img src="logoonepiece.webp" alt="Logo"></div>
+        <ul class="navbar-links">
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+        <div class="navbar-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <form id="myForm" onsubmit="enviarFormulario(); return false;">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <input type="submit" value="Enviar">
+        </form>
+        
+    </div>
+
+    <script src="ex11.js"></script>
+</body>
+</html>

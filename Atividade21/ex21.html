@@ -1,0 +1,91 @@
+<!-- Luana Aparecida Tavares -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas</title>
+    <link rel="stylesheet" href="ex21.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Reserve sua data e hora</h1>
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="form-group">
+            <label for="date">Data:</label>
+            <input type="date" id="date">
+        </div>
+        <div class="form-group">
+            <label for="time">Hora:</label>
+            <input type="time" id="time">
+        </div>
+        <button id="reserveButton">Reservar</button>
+        <div id="confirmation"></div>
+        <div id="reservations"></div>
+    </div>
+
+    <script>
+        let reservations = [];
+
+        // Carregar reservas salvas do armazenamento local ao carregar a página
+        window.onload = function() {
+            const savedReservations = localStorage.getItem('reservations');
+            if (savedReservations) {
+                reservations = JSON.parse(savedReservations);
+                updateReservationList();
+            }
+        };
+
+        // Função para fazer a reserva
+        function makeReservation() {
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Verifica se o nome, a data e a hora foram preenchidos
+            if (name && date && time) {
+                const reservation = {
+                    name: name,
+                    date: date,
+                    time: time
+                };
+
+                // Adiciona a reserva ao array de reservas
+                reservations.push(reservation);
+
+                // Salva as reservas no armazenamento local
+                localStorage.setItem('reservations', JSON.stringify(reservations));
+
+                // Atualiza a lista de reservas
+                updateReservationList();
+
+                // Exibe a confirmação
+                document.getElementById('confirmation').innerText = 'Reserva feita com sucesso!';
+            } else {
+                // Exibe uma mensagem de erro se o nome, a data ou a hora não forem preenchidos
+                document.getElementById('confirmation').innerText = 'Por favor, preencha todos os campos.';
+            }
+        }
+
+        // Função para atualizar a lista de reservas
+        function updateReservationList() {
+            const reservationList = document.getElementById('reservations');
+            reservationList.innerHTML = '';
+
+            // Adiciona cada reserva à lista de reservas
+            reservations.forEach(reservation => {
+                const li = document.createElement('li');
+                li.textContent = `Nome: ${reservation.name}, Data: ${reservation.date}, Hora: ${reservation.time}`;
+                reservationList.appendChild(li);
+            });
+        }
+
+        // Adiciona um evento de clique ao botão de reserva
+        document.getElementById('reserveButton').addEventListener('click', makeReservation);
+    </script>
+</body>
+</html>

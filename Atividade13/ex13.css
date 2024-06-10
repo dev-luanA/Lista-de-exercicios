@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.clock-container {
+    position: relative;
+}
+
+.clock {
+    display: flex;
+    font-size: 48px;
+    position: relative;
+}
+
+.clock > div {
+    margin-right: 10px;
+}
+
+.hour {
+    width: 60px;
+    height: 60px;
+    background-color: #c32828; /* Vermelho */
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+}
+
+.minute {
+    width: 60px;
+    height: 60px;
+    background-color: #caba87; 
+        color: #fff;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+}
+
+.second {
+    width: 60px;
+    height: 60px;
+    background-color: #173e7c; 
+    color: #fff;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 10px;
+}
+
+.hat {
+    position: absolute;
+    top: -150px; /* Ajuste a posição vertical conforme necessário */
+    left: 50%; /* Posiciona no centro horizontal */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 1; /* Garante que o chapéu esteja acima do relógio */
+    width: 300px; /* Defina a largura desejada */
+    height: auto; /* Mantenha a proporção da imagem */
+}
