@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 document.addEventListener("DOMContentLoaded", function() {
     const slide = document.querySelector('.carousel-slide');
     const prevButton = document.querySelector('.prev-button');

@@ -1,3 +1,4 @@
+/*Luana Aparecida Tavares*/
 body {
     background-color: #70bcff;
     font-family: Arial, sans-serif;
@@ -20,7 +21,7 @@ body {
 }
 
 .animate {
-    transform: scale(0.5); /* Modificado para diminuir o tamanho do botão */
+    transform: scale(0.5);
 }
 
 

@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 document.addEventListener('DOMContentLoaded', () => {
     const textInput = document.getElementById('textInput');
     const wordCount = document.getElementById('wordCount');

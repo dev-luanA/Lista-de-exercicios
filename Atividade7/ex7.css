@@ -1,9 +1,8 @@
-/* Estilos gerais */
+/*Luana Aparecida Tavares*/
 body {
     font-family: Arial, sans-serif;
   }
   
-  /* Estilos do botão do menu */
   .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -17,13 +16,12 @@ body {
     background-color: #3e8e41;
   }
   
-  /* Estilos do dropdown */
   .dropdown {
     position: relative;
     display: inline-block;
   }
   
-  /* Estilos do conteúdo do dropdown (itens do menu) */
+  
   .dropdown-content {
     display: none;
     position: absolute;
@@ -33,7 +31,6 @@ body {
     z-index: 1;
   }
   
-  /* Estilos dos itens do menu */
   .dropdown-content a {
     color: black;
     padding: 12px 16px;

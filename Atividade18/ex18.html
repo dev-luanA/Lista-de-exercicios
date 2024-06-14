@@ -8,16 +8,14 @@
     <div id="map" style="width: 800px; height: 700px;"></div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-     <!-- Atividade Sobre API de LUANA APARECIDA TAVARES  -->
     <script>
-       var map = L.map('map').setView([-34.6037, -58.3816], 15); // Coordenadas de Buenos Aires, Argentina
+       var map = L.map('map').setView([-34.6037, -58.3816], 15); 
 
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 20
         }).addTo(map);
 
-        // Array de objetos de marcadores para a Argentina
         var markers = [
             { 
                 lat: -34.6037, 
@@ -26,7 +24,6 @@
             }
         ];
 
-        // Adicionar marcadores ao mapa
         markers.forEach(function(marker) {
             L.marker([marker.lat, marker.lng]).addTo(map)
                 .bindPopup(marker.name);

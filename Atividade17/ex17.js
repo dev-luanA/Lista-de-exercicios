@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const messageDiv = document.getElementById('message');
+    const logoutButton = document.getElementById('logoutButton');
 
-    // Hardcoded user data for validation
     const userData = {
         username: 'luana',
         password: '123'
     };
 
-    // Check if the user is already logged in
     if (localStorage.getItem('isLoggedIn') === 'true') {
         showMessage(`Bem-vindo de volta, ${userData.username}!`);
         loginForm.style.display = 'none';
+        logoutButton.style.display = 'block';
     }
 
     loginForm.addEventListener('submit', (event) => {
@@ -23,9 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('isLoggedIn', 'true');
             showMessage(`Bem-vindo, ${username}!`);
             loginForm.style.display = 'none';
+            logoutButton.style.display = 'block';
         } else {
             showMessage('Usuário ou senha incorretos. Tente novamente.', true);
         }
+    });
+
+    logoutButton.addEventListener('click', () => {
+        localStorage.removeItem('isLoggedIn');
+        showMessage('');
+        loginForm.style.display = 'block';
+        logoutButton.style.display = 'none';
     });
 
     function showMessage(message, isError = false) {

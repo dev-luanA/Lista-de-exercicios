@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 const audio = document.getElementById('audio');
 const playPauseBtn = document.getElementById('playPauseBtn');
 const stopBtn = document.getElementById('stopBtn');

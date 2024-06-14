@@ -34,11 +34,9 @@
                         const img = document.createElement('img');
                         img.src = event.target.result;
                         
-                        // Insere a nova imagem no final da lista de pré-visualização
                         preview.appendChild(img);
 
-                        // Armazena a imagem no Local Storage com um identificador único
-                        const timestamp = new Date().getTime(); // Timestamp como identificador único
+                        const timestamp = new Date().getTime();
                         localStorage.setItem(`uploadedImage_${timestamp}`, event.target.result);
                     }
 
@@ -47,7 +45,6 @@
             }
         });
 
-        // Verifica se há imagens armazenadas no Local Storage ao carregar a página
         window.onload = function() {
             for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
@@ -55,7 +52,6 @@
                     const img = document.createElement('img');
                     img.src = localStorage.getItem(key);
                     
-                    // Insere a imagem do Local Storage no final da lista de pré-visualização
                     preview.appendChild(img);
                 }
             }
@@ -63,11 +59,8 @@
 
         const uploadForm = document.getElementById('uploadForm');
         uploadForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o envio padrão do formulário
+            event.preventDefault(); 
 
-            // Aqui você pode adicionar a lógica para enviar os arquivos para o servidor
-            // Por exemplo, usando AJAX ou fetch API
-            // Aqui, vamos apenas exibir uma mensagem de alerta
             alert('Arquivos enviados com sucesso!');
         });
     </script>

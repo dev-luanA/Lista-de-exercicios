@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;

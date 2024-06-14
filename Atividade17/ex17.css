@@ -1,58 +1,88 @@
-/* Luana Aparecida Tavares*/
+/*Luana Aparecida Tavares*/
 body {
     font-family: Arial, sans-serif;
+    background-image: url('onepiece.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
 }
 
-.container {
-    background-color: #127;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+#message {
     text-align: center;
-    color: white;
+    margin-top: 20px;
+    color: red;
+    font-weight: bold; 
 }
 
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
+form {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Adiciona posição relativa para elementos filhos absolutos */
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.input-group input {
+#welcomeMessage, #errorMessage {
+    position: absolute;
+    top: -40px; /* Move para cima */
+    left: 0;
     width: 100%;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    background-color: #4caf50; /* Cor de fundo do texto */
+    color: white; /* Cor do texto */
+    text-align: center;
     border-radius: 5px;
+    display: none; /* Inicialmente esconde as mensagens */
+}
+
+#errorMessage {
+    background-color: #f44336; /* Cor de fundo do erro */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
+    width: 100%;
+    background-color: #127;
     color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: rgb(5, 16, 73);
 }
 
-#message {
-    margin-top: 20px;
-    font-size: 18px;
+#logoutButton {
+    width: 100%;
+    background-color: #ec5044;
     color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+#logoutButton:hover {
+    background-color: #bb1408;
 }

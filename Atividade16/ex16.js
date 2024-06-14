@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 document.addEventListener('DOMContentLoaded', () => {
     const newTaskInput = document.getElementById('newTask');
     const addTaskButton = document.getElementById('addTaskButton');

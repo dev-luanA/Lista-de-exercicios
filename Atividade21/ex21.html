@@ -31,7 +31,6 @@
     <script>
         let reservations = [];
 
-        // Carregar reservas salvas do armazenamento local ao carregar a página
         window.onload = function() {
             const savedReservations = localStorage.getItem('reservations');
             if (savedReservations) {
@@ -40,13 +39,11 @@
             }
         };
 
-        // Função para fazer a reserva
         function makeReservation() {
             const name = document.getElementById('name').value;
             const date = document.getElementById('date').value;
             const time = document.getElementById('time').value;
 
-            // Verifica se o nome, a data e a hora foram preenchidos
             if (name && date && time) {
                 const reservation = {
                     name: name,
@@ -54,29 +51,21 @@
                     time: time
                 };
 
-                // Adiciona a reserva ao array de reservas
                 reservations.push(reservation);
-
-                // Salva as reservas no armazenamento local
                 localStorage.setItem('reservations', JSON.stringify(reservations));
-
-                // Atualiza a lista de reservas
                 updateReservationList();
-
-                // Exibe a confirmação
+               
                 document.getElementById('confirmation').innerText = 'Reserva feita com sucesso!';
             } else {
-                // Exibe uma mensagem de erro se o nome, a data ou a hora não forem preenchidos
+              
                 document.getElementById('confirmation').innerText = 'Por favor, preencha todos os campos.';
             }
         }
 
-        // Função para atualizar a lista de reservas
         function updateReservationList() {
             const reservationList = document.getElementById('reservations');
             reservationList.innerHTML = '';
 
-            // Adiciona cada reserva à lista de reservas
             reservations.forEach(reservation => {
                 const li = document.createElement('li');
                 li.textContent = `Nome: ${reservation.name}, Data: ${reservation.date}, Hora: ${reservation.time}`;
@@ -84,7 +73,6 @@
             });
         }
 
-        // Adiciona um evento de clique ao botão de reserva
         document.getElementById('reserveButton').addEventListener('click', makeReservation);
     </script>
 </body>

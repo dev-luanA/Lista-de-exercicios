@@ -40,12 +40,12 @@ form {
 }
 
 .container {
-    margin-top: 20px; /* Distância entre o topo da página e o título */
-    margin-bottom: 20px; /* Distância entre as imagens e o formulário */
+    margin-top: 20px; 
+    margin-bottom: 20px; 
 }
 
 form {
-    margin-bottom: 20px; /* Distância entre o formulário e as imagens */
+    margin-bottom: 20px; 
 }
 
 h2 {
@@ -59,7 +59,7 @@ input[type="file"] {
 
 button {
     padding: 10px 20px;
-    background-color: #127; /* Azul cor #127 */
+    background-color: #127;
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,13 +67,13 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Tom de azul mais escuro */
+    background-color: #0056b3;
 }
 
 .preview {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centraliza as imagens na pré-visualização */
+    justify-content: center; 
 }
 
 .preview img {

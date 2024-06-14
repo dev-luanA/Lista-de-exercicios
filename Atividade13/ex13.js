@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 function updateClock() {
     const now = new Date();
     const hour = now.getHours().toString().padStart(2, '0');
@@ -9,8 +10,6 @@ function updateClock() {
     document.getElementById('second').innerText = second;
 }
 
-// Atualiza o relógio a cada segundo
 setInterval(updateClock, 1000);
 
-// Atualiza o relógio imediatamente ao carregar a página
 updateClock();

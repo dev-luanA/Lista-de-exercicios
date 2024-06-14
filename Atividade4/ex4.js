@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 function adicionarLinha() {
     const tbody = document.getElementById('table-body');
 

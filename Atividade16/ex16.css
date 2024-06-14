@@ -1,5 +1,8 @@
-/* Luana Aparecida Tavares*/
+/* Luana Aparecida Tavares */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
+    background-image: url('walllu.jpg');
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -10,11 +13,12 @@ body {
 }
 
 .container {
-    background-color: #127; /* Azul cor 127 */
+    background-color: #127; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 80%;
+    max-width: 600px;
     text-align: center;
     color: white;
 }
@@ -62,6 +66,8 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }
 
 li.completed {

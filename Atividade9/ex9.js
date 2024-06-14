@@ -1,3 +1,4 @@
+//Luana Aparecida Tavares
 document.getElementById('animateButton').addEventListener('click', function() {
     let button = this;
 
